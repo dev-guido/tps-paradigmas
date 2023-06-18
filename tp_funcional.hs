@@ -11,7 +11,7 @@ indianaI =  Filmacion "Indiana Jones I" 8 1981 115 ["Harrison Ford"]
 
 {- Ejer1 -}
 esDarinesca :: Filmacion -> Bool
-esDarinesca filme = head (actores filme) == "Ricardo Darín"
+esDarinesca filme = (=="Ricardo Darín").head.actores $ filme
 
 pintaBuena :: Filmacion -> Bool
 pintaBuena filme = (>=5).length.actores $ filme
